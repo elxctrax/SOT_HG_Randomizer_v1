@@ -1,4 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.hash) {
+        history.replaceState(null, '', window.location.href.split('#')[0]);
+    }
+    
+    console.log("JavaScript Initialized");
     //ship dropdown
     const shipTypeDropdown = document.querySelector(".dropdown:nth-of-type(1) .dropdown-toggle");
     const shipDropDownItems = document.querySelectorAll(".dropdown:nth-of-type(1) .dropdown-item");
