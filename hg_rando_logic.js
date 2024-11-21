@@ -1,9 +1,10 @@
 document.addEventListener("DOMContentLoaded", function() {
-    console.log("JavaScript Initialized on Page Load");
     if (window.location.hash) {
-        console.log("Removing hash fragment:", window.location.hash);
+        console.log("Removing hash:", window.location.hash);
         history.replaceState(null, '', window.location.href.split('#')[0]);
     }
+
+    console.log("JavaScript Initialized on Page Load");
     //ship dropdown
     const shipTypeDropdown = document.querySelector(".dropdown:nth-of-type(1) .dropdown-toggle");
     const shipDropDownItems = document.querySelectorAll(".dropdown:nth-of-type(1) .dropdown-item");
